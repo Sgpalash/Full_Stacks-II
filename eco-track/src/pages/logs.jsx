@@ -7,6 +7,8 @@ export const logs = [
   { id: 6, activity: "Plant-based Meal", carbon: 2 },
   { id: 7, activity: "Air Travel", carbon: 1 }
 ];
+const totalCarbon = logs.reduce((total, log) => total + log.carbon, 0);
+const averageCarbon = (totalCarbon / logs.length);
 
 export const HighImpact = () => {
   const highCarbonLogs = logs.filter(log => log.carbon <= 4);
@@ -24,6 +26,8 @@ export const HighImpact = () => {
           </li>
         ))}
       </ul>
+      <p style={{color: "#f559f5ff"}}>Total Carbon Emission: {totalCarbon} kgs</p>
+      <p style={{color: "#f559f5ff"}}>Average Carbon Emission: {averageCarbon.toFixed(2)} kgs</p>
     </div>
   );
 };
