@@ -1,7 +1,5 @@
 import { useState } from 'react';
-import Dashboard from './pages/dashboard';
 import { HighImpact } from "./pages/logs";
-import './App.css';
 import Header from './pages/Header';
 
 
@@ -12,7 +10,6 @@ function App() {
     <>
       <Header />
       <HighImpact />
-      <br/>
     </>
   );
 }

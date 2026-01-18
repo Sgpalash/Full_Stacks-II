@@ -11,7 +11,7 @@ const totalCarbon = logs.reduce((total, log) => total + log.carbon, 0);
 const averageCarbon = (totalCarbon / logs.length);
 
 export const HighImpact = () => {
-  const highCarbonLogs = logs.filter(log => log.carbon <= 4);
+  const highCarbonLogs = logs;
 
   return (
     <div style={{ color: "red", padding: "20px", backgroundColor: "#000000" }}>
