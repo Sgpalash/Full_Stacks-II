@@ -2,8 +2,8 @@ import { useAuth } from "../context/AuthContext";
 import { useNavigate } from "react-router-dom";
 
 const Logout = () => {
-    const { logout } = useAuth();   // ✅ hook inside component
-    const navigate = useNavigate(); // ✅ hook inside component
+    const { logout } = useAuth();   
+    const navigate = useNavigate(); 
 
     const handleLogout = () => {
         
