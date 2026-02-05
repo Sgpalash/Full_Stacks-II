@@ -15,6 +15,11 @@ const Logs = () => {
     }
   }, [status, dispatch]);
 
+  const handlefetch=()=>
+  {
+    dispatch(fetchLogs());
+  }
+
   if (status === "loading") {
     return <p>Loading Logs...</p>;
   }
@@ -35,7 +40,20 @@ const Logs = () => {
           </li>
         ))}
       </ul>
-
+      <button onClick={handlefetch}
+        style={{
+                    background: "linear-gradient(135deg, #ff4d4d, #c1121f)",
+                    color: "white",
+                    border: "none",
+                    padding: "12px 26px",
+                    borderRadius: "30px",
+                    fontSize: "15px",
+                    fontWeight: "600",
+                    letterSpacing: "0.5px",
+                    cursor: "pointer",
+                    boxShadow: "0 8px 20px rgba(193, 18, 31, 0.4)",
+                    transition: "all 0.3s ease"
+                }}>Refresh ↻</button>
       <p style={{color: "white"}}>Total carbon emmision = {xyz}</p>
     </div>
   );
